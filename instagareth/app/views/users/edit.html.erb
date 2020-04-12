@@ -1,1 +1,2 @@
 <%= render 'form' %>
+<%= link_to "I've had enough, get rid of my account", user_path(@user), method: :delete, data: { confirm: "Are you sure?" } %>
