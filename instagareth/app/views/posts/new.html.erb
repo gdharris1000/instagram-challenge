@@ -1,0 +1,15 @@
+<%= form_for @post do |f|%>
+    <p>
+        <%= f.label :caption %>
+        <br>
+        <%= f.text_field :caption %>
+    </p>
+    <p>
+        <%= f.label :photo %>
+        <br>
+        <%= f.file_field :photo %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<%end%>
