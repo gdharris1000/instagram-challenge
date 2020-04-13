@@ -3,6 +3,7 @@
 <%@posts.each do |post|%>
    <img src="<%=(url_for(post.photo))%>">
     <p>
-        <%=post.caption%>
+        Caption: <%=post.caption%>
+        User id: <%=post.user_id%>
     </p>
 <%end%>
