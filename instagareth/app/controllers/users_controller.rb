@@ -28,7 +28,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout
+    session[:user_id] = nil
+    redirect_to root_path
+  end
+
   def show
+    @posts = Post.where(user_id: params[:id])
   end
 
   def edit

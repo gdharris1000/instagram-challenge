@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(@post.user_id)
   end
 
   def edit
@@ -47,5 +48,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:caption, :photo)
+  end
+
+  def find_user
+    
   end
 end

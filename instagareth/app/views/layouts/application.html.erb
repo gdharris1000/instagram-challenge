@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    
+   
+    <%if !logged_in? %>
+    
+      <%= link_to "Sign in", '/users'%> / <%= link_to "Sign up", new_user_path %>
+    <%else%>
+      <%= link_to "New Post", new_post_path%> 
+      <%= link_to "Update Profile", edit_user_path(current_user.id)%>
+      <%= link_to "Sign out", '/logout'%>
+    <%end%>
     <%= yield %>
   </body>
 </html>

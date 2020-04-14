@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+    # before_action :authorized
+    # skip_before_action :authorized, only[root_path, :login]
     helper_method :current_user
     helper_method :logged_in?
 
@@ -10,5 +12,10 @@ class ApplicationController < ActionController::Base
     def logged_in?
         !current_user.nil?
     end
+
+
+    # def authorized
+    #     redirect_to root_path unless logged_in?
+    # end
 
 end

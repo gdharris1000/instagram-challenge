@@ -1,2 +1,11 @@
 <h2><%= @user.name %></h2>
+<% if @user.id == current_user.id %>
 <%= link_to "update user details", edit_user_path %>
+<%end%>
+<%@posts.each do |post|%>
+   <img src="<%=(url_for(post.photo))%>">
+    <p>
+        Caption: <%=post.caption%>
+        User: <%=User.find(post.user_id).name%>
+    </p>
+<%end%>

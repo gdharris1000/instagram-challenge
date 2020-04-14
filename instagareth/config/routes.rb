@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'login', to: 'users#index'
   post 'login', to: 'users#login'
   get 'welcome', to: 'users#welcome'
+  get 'logout', to: 'users#logout'
 end
