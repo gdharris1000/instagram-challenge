@@ -1,12 +1,15 @@
 
+<div class="gallery">
 <%@posts.each do |post|%>
+  <div class="image">
    <img src="<%=(url_for(post.photo))%>">
-    <p>
+    <br>
         Caption: <%=post.caption%>
+    <br>
         User: <%=User.find(post.user_id).name%>
-    </p>
-    
+  </div>  
     <% if logged_in? && post.user_id == current_user.id%>
    <%= link_to "update", post%>
     <%end%>
 <%end%>
+</div>
