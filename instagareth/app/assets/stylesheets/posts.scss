@@ -2,19 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.gallery{
-    line-height: 0;
+// .gallery{
+//     line-height: 0;
    
-    -webkit-column-count: 5;
-    -webkit-column-gap:   15px;
-    -moz-column-count:    5;
-    -moz-column-gap:      15px;
-    column-count:         5;
-    column-gap:           15px;
-}
+//     -webkit-column-count: 5;
+//     -webkit-column-gap:   15px;
+//     -moz-column-count:    5;
+//     -moz-column-gap:      15px;
+//     column-count:         5;
+//     column-gap:           15px;
+//     row-gap:              10px;
+// }
 
 .image img{
     width: 100%;
+    height: auto;
     object-fit: cover;
+}
+.image p{
+    display: block;
 }
 

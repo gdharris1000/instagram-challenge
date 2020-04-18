@@ -11,7 +11,7 @@
 
   <body>
     
-   
+    <%= link_to "Home", root_path%> 
     <%if !logged_in? %>
       <%= link_to "Sign in", '/users'%> / <%= link_to "Sign up", new_user_path %>
     <%else%>

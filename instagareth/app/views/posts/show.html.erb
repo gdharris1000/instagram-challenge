@@ -1,7 +1,9 @@
 <img src="<%=(url_for(@post.photo))%>">
-    <p>
-        Caption: <%=@post.caption%>
-        User: <%=@user.name%>
-    </p>
+<p>
+    Caption: <%=@post.caption%>
+    User: <%=@user.name%>
+</p>
+<%if logged_in? && post.user_id == current_user.id %>
     <p><%= link_to "update caption", edit_post_path %></p>
     <p><%= link_to "Delete post", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<%end%>

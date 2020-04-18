@@ -1,24 +1,30 @@
-# README
+# Instagareth README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+A photo sharing application based on Instagram built using Ruby on Rails
 
 * Ruby version
+2.6.3
 
-* System dependencies
+* Rails version
+6.0.2.2
 
-* Configuration
+## Quickstart
 
-* Database creation
+First, clone this repository. Then:
 
-* Database initialization
+```bash
+> bundle install
+> bin/rails db:create
+> bin/rails db:migrate
 
-* How to run the test suite
+> bin/rails server # Start the server at localhost:3000
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Features
+- Users can sign up
+- Users can login / log out
+- Users can upload a photo
+- Users can update their profile
+- Users can view all photos uploaded to the site
+- Users can update the captions of photos they have uploaded
+- Users can delete photos they have uploaded

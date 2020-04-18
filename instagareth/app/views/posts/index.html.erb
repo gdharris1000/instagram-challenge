@@ -1,15 +1,19 @@
 
 <div class="gallery">
-<%@posts.each do |post|%>
-  <div class="image">
-   <img src="<%=(url_for(post.photo))%>">
-    <br>
-        Caption: <%=post.caption%>
-    <br>
-        User: <%=User.find(post.user_id).name%>
-  </div>  
-    <% if logged_in? && post.user_id == current_user.id%>
-   <%= link_to "update", post%>
-    <%end%>
-<%end%>
+  <%@posts.each do |post|%>
+    <div class="image">
+    <img src="<%=(url_for(post.photo))%>">
+      <div class="image-caption">
+          Caption: <%=post.caption%>
+      </div>
+      <div class="image-user">
+          User: <%=User.find(post.user_id).name%>
+      </div>
+      <% if logged_in? && post.user_id == current_user.id%>
+        <div class="image-update">
+          <%= link_to "update", post%>
+        </div>
+      <%end%>
+    </div>  
+  <%end%>
 </div>
